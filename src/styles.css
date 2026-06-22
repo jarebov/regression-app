@@ -1,0 +1,337 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111827;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+}
+
+.app {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #00356b;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00356b;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: #00356b;
+}
+
+.subtitle {
+  margin: 0;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.yale-logo {
+  height: 86px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.description {
+  margin: 0 0 12px;
+  color: #1f2937;
+  line-height: 1.45;
+}
+
+.description p {
+  margin: 0 0 10px;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.panel-controls {
+  margin-top: 10px;
+}
+
+.sample-controls {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-items: end;
+  margin-top: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+input[type='range'] {
+  width: 100%;
+}
+
+select,
+button {
+  font-size: 0.95rem;
+}
+
+.control-readout {
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.math-inline {
+  white-space: nowrap;
+}
+
+.math-inline .katex {
+  font-size: 1em;
+}
+
+.buttons {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.sample-buttons {
+  justify-content: flex-start;
+}
+
+button {
+  padding: 7px 12px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f8fafc;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.regression-stats div {
+  min-height: 44px;
+}
+
+.ols-stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-label {
+  display: block;
+  color: #475569;
+  font-size: 0.82rem;
+  margin-bottom: 2px;
+}
+
+.population-estimate {
+  color: #d55e00;
+}
+
+.sample-estimate {
+  color: #0072b2;
+}
+
+.panel {
+  margin-bottom: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  overflow-x: auto;
+  background: #ffffff;
+}
+
+.panel-subtitle {
+  font-size: 0.92rem;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.svg-chart {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  border: 1px solid #f1f5f9;
+  background: #fcfdff;
+}
+
+.plot-bg {
+  fill: #ffffff;
+}
+
+.grid-line {
+  stroke: #e5e7eb;
+  stroke-width: 1;
+}
+
+.axis {
+  stroke: #64748b;
+  stroke-width: 1.1;
+}
+
+.axis-label {
+  fill: #334155;
+  font-size: 11px;
+}
+
+.axis-title {
+  fill: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.population-dot {
+  fill: #9ca3af;
+  opacity: 0.45;
+}
+
+.sample-dot {
+  fill: #0072b2;
+  opacity: 0.9;
+  stroke: #eff6ff;
+  stroke-width: 0.8;
+}
+
+.population-line {
+  stroke: #d55e00;
+  stroke-width: 2.4;
+}
+
+.sample-line {
+  stroke: #0072b2;
+  stroke-width: 2.3;
+}
+
+.sample-line-faint {
+  stroke: #0072b2;
+  stroke-width: 1.2;
+  opacity: 0.18;
+}
+
+.mean-guide {
+  stroke: #d55e00;
+  stroke-width: 1.1;
+  stroke-dasharray: 5 5;
+  opacity: 0.58;
+}
+
+.mean-point {
+  fill: #d55e00;
+  stroke: #ffffff;
+  stroke-width: 1.4;
+}
+
+.legend text {
+  fill: #334155;
+  font-size: 11px;
+}
+
+.plot-note {
+  margin: 8px 0 0;
+  color: #334155;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.footer-credit {
+  margin-top: auto;
+  padding-top: 14px;
+  text-align: right;
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+.footer-credit a {
+  color: #4b5563;
+  text-decoration: underline;
+}
+
+.footer-credit a:hover {
+  text-decoration: underline;
+}
+
+.footer-credit a:focus-visible {
+  outline: 2px solid #00356b;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (max-width: 760px) {
+  .app {
+    padding: 12px;
+  }
+
+  .app-header {
+    align-items: center;
+  }
+
+  .yale-logo {
+    height: 64px;
+  }
+
+  .sample-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .ols-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .sample-buttons {
+    justify-content: flex-start;
+  }
+
+  .footer-credit {
+    text-align: center;
+  }
+}
